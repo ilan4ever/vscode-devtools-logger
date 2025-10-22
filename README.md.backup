@@ -2,17 +2,6 @@
 
 A VS Code extension that captures and logs all DevTools Console output to a persistent, human-readable log file. Perfect for debugging extensions, tracking console messages, and analyzing VS Code's internal behavior.
 
-## 🚀 Quick Start Guide
-
-After installing this extension, you'll see a **Welcome screen** with a **"Create Desktop Shortcut"** button:
-
-1. **Click "Create Desktop Shortcut"** in the Welcome view
-2. **Approve the admin privilege prompt** (required to place the shortcut on your desktop)
-3. **Use the desktop shortcut to launch VS Code** - This launches VS Code with DevTools logging enabled
-4. **View your logs** using the command `DevTools Logger: Show DevTools Console Log`
-
-> ⚠️ **Important**: You must run VS Code through the desktop shortcut for logging to work! The shortcut automatically sets the required environment variables.
-
 ## ✨ Features
 
 - 📝 **Human-Readable Timestamps** - Automatically converts Chromium timestamps to readable format (`2025-10-22 22:08:46.241`)

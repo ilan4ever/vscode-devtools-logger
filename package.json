@@ -2,7 +2,7 @@
   "name": "vscode-devtools-logger",
   "displayName": "VS Code DevTools Logger",
   "description": "Captures VS Code DevTools Console output with human-readable timestamps. Auto-formats logs in real-time for easy debugging.",
-  "version": "2.0.0",
+  "version": "2.3.0",
   "publisher": "ilanaviv",
   "author": {
     "name": "Ilan Aviv"
@@ -34,6 +34,12 @@
   "contributes": {
     "commands": [
       {
+        "command": "devtools-logger.createDesktopShortcut",
+        "title": "🖥️ Create Desktop Shortcut",
+        "category": "DevTools Logger",
+        "icon": "$(desktop-download)"
+      },
+      {
         "command": "devtools-logger.showLog",
         "title": "Show DevTools Console Log",
         "category": "DevTools Logger"
@@ -43,6 +49,39 @@
         "title": "Open Logs Folder",
         "category": "DevTools Logger"
       }
-    ]
+    ],
+    "viewsWelcome": [
+      {
+        "view": "devtools-logger.welcomeView",
+        "contents": "# Welcome to VS Code DevTools Logger! 🎉\n\nStop copy-pasting console errors to ChatGPT - capture everything automatically!\n\n## 🚀 Quick Setup (2 Steps)\n\n### Step 1: Create Desktop Shortcut\nClick the button below to create a desktop icon that launches VS Code with logging enabled:\n\n[$(desktop-download) Create Desktop Shortcut](command:devtools-logger.createDesktopShortcut)\n\n_Note: You may need to run as administrator to place the icon on your desktop._\n\n---\n\n### Step 2: Launch VS Code\nDouble-click the desktop shortcut to start logging!\n\n---\n\n## 📖 Commands\n\n[$(file-text) Show DevTools Console Log](command:devtools-logger.showLog)\n\n[$(folder-opened) Open Logs Folder](command:devtools-logger.openLogFolder)\n\n---\n\n## 🔗 Links\n\n[$(github) GitHub Repository](https://github.com/ilan4ever/vscode-devtools-logger)\n\n[$(book) Documentation](https://github.com/ilan4ever/vscode-devtools-logger#readme)\n\n[$(bug) Report Issue](https://github.com/ilan4ever/vscode-devtools-logger/issues)\n\n[$(comment-discussion) Discussions](https://github.com/ilan4ever/vscode-devtools-logger/discussions)\n\n---\n\n## 💡 How It Works\n\n1. The desktop shortcut launches VS Code with `ELECTRON_ENABLE_LOGGING` enabled\n2. All console output is captured with human-readable timestamps\n3. View formatted logs anytime with our commands\n4. Share complete logs with AI assistants for better debugging!\n\n---\n\n**Created by [Ilan Aviv](https://github.com/ilan4ever)** | MIT License"
+      }
+    ],
+    "views": {
+      "devtools-logger-container": [
+        {
+          "id": "devtools-logger.welcomeView",
+          "name": "Getting Started",
+          "icon": "icon.svg"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "devtools-logger-container",
+          "title": "DevTools Logger",
+          "icon": "icon.svg"
+        }
+      ]
+    },
+    "menus": {
+      "extension/context": [
+        {
+          "command": "devtools-logger.createDesktopShortcut",
+          "group": "navigation",
+          "when": "extension == ilanaviv.vscode-devtools-logger"
+        }
+      ]
+    }
   }
 }
