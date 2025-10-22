@@ -1,0 +1,21 @@
+# VSIX packages
+*.vsix
+
+# Temporary/dev files
+create-icon.ps1
+format-log-now.ps1
+
+# Duplicate files
+vscode-devtools-logger-*
+
+# Node modules (if added later)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+*.swp
+*.swo

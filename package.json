@@ -1,0 +1,48 @@
+{
+  "name": "vscode-devtools-logger",
+  "displayName": "VS Code DevTools Logger",
+  "description": "Captures VS Code DevTools Console output with human-readable timestamps. Auto-formats logs in real-time for easy debugging.",
+  "version": "2.0.0",
+  "publisher": "ilanaviv",
+  "author": {
+    "name": "Ilan Aviv"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilanaviv/vscode-devtools-logger"
+  },
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other",
+    "Debuggers"
+  ],
+  "keywords": [
+    "devtools",
+    "console",
+    "logger",
+    "debugging",
+    "electron"
+  ],
+  "main": "./extension.js",
+  "icon": "icon.png",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "devtools-logger.showLog",
+        "title": "Show DevTools Console Log",
+        "category": "DevTools Logger"
+      },
+      {
+        "command": "devtools-logger.openLogFolder",
+        "title": "Open Logs Folder",
+        "category": "DevTools Logger"
+      }
+    ]
+  }
+}
